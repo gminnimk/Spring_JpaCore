@@ -34,10 +34,6 @@ public class EntityTest {
 
 
 
-
-
-
-
 // EntityTransaction 성공 테스트
     @Test
     @DisplayName("EntityTransaction 성공 테스트")
