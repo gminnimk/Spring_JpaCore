@@ -22,17 +22,6 @@ public class EntityTest {
         em = emf.createEntityManager();
     }
 
-    // 테스트 메소드 (구현 필요)
-    @Test
-    void test1() {
-        // 테스트 코드 작성
-    }
-}
-
-
-
-
-
 
 // EntityTransaction 성공 테스트
     @Test
