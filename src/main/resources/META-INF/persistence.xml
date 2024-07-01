@@ -2,18 +2,28 @@
 <persistence version="2.2"
              xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+    <!-- 'memo'라는 이름의 퍼시스턴스 유닛 정의 -->
     <persistence-unit name="memo">
+        <!-- JPA 엔티티 클래스 지정 -->
         <class>com.sparta.entity.Memo</class>
         <properties>
+            <!-- 데이터베이스 드라이버 설정 -->
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <!-- 데이터베이스 사용자명 설정 -->
             <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <!-- 데이터베이스 비밀번호 설정 -->
             <property name="jakarta.persistence.jdbc.password" value="Rudals58088@@"/>
+            <!-- 데이터베이스 URL 설정 -->
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/memo"/>
 
+            <!-- 하이버네이트 설정: 스키마 자동 생성 옵션 (create, update, validate, none) -->
             <property name="hibernate.hbm2ddl.auto" value="create" />
 
+            <!-- 하이버네이트 설정: 실행되는 SQL을 출력 -->
             <property name="hibernate.show_sql" value="true"/>
+            <!-- 하이버네이트 설정: 출력되는 SQL을 포맷팅 -->
             <property name="hibernate.format_sql" value="true"/>
+            <!-- 하이버네이트 설정: SQL 주석을 포함 -->
             <property name="hibernate.use_sql_comments" value="true"/>
         </properties>
     </persistence-unit>

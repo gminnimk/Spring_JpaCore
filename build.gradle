@@ -1,23 +1,32 @@
 plugins {
+    // Java 플러그인 적용
     id 'java'
 }
 
+// 프로젝트 그룹과 버전 설정
 group = 'org.sparta'
 version = '1.0-SNAPSHOT'
 
+// 저장소 설정
 repositories {
+    // Maven Central 저장소 사용
     mavenCentral()
 }
 
+// 의존성 설정
 dependencies {
-    // JPA 구현체인 hibernate
+    // JPA 구현체인 Hibernate 의존성 추가
     implementation 'org.hibernate:hibernate-core:6.1.7.Final'
-// MySQL
+    // MySQL 데이터베이스 커넥터 의존성 추가
     implementation 'mysql:mysql-connector-java:8.0.28'
+    // JUnit 플랫폼 BOM(부트스트랩 객체 모델) 의존성 추가 (테스트용)
     testImplementation platform('org.junit:junit-bom:5.10.0')
+    // JUnit Jupiter (JUnit 5) 의존성 추가 (테스트용)
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
 
+// 테스트 설정
 test {
+    // JUnit 플랫폼 사용
     useJUnitPlatform()
 }

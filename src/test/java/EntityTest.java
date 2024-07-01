@@ -9,15 +9,25 @@ import org.junit.jupiter.api.Test;
 
 public class EntityTest {
 
+    // 엔티티 매니저 팩토리와 엔티티 매니저 객체 선언
     EntityManagerFactory emf;
     EntityManager em;
 
+    // 각 테스트 실행 전 설정 작업
     @BeforeEach
     void setUp() {
+        // 'memo'라는 이름의 퍼시스턴스 유닛을 기반으로 엔티티 매니저 팩토리 생성
         emf = Persistence.createEntityManagerFactory("memo");
+        // 엔티티 매니저 팩토리에서 엔티티 매니저 생성
         em = emf.createEntityManager();
     }
 
+    // 테스트 메소드 (구현 필요)
+    @Test
+    void test1() {
+        // 테스트 코드 작성
+    }
+}
 
 
 
@@ -28,9 +38,7 @@ public class EntityTest {
 
 
 
-
-
-    // EntityTransaction 성공 테스트
+// EntityTransaction 성공 테스트
     @Test
     @DisplayName("EntityTransaction 성공 테스트")
     void test1() {
